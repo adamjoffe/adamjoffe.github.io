@@ -4,8 +4,6 @@ gem "jekyll-theme-chirpy", "~> 7.2", ">= 7.2.4"
 
 gem "html-proofer", "~> 5.0", group: :test
 
-# gem "jekyll-mermaid"
-
 group :jekyll_plugins do
   gem "jekyll-mermaid", "~> 1.0.0"
 end

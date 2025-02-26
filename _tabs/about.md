@@ -18,7 +18,6 @@ Now focussed as a Full Stack Engineer, designing and architecting solutions from
 
 
 {% mermaid %}
-%%{init: {'theme':'forest'}}%%
 flowchart BT;
     Sunswift[Sunswift]
     SunswiftR1([Structural Team Lead / Software Engineer])
