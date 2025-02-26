@@ -13,6 +13,17 @@ bundle exec jekyll serve
 
 3. [Open page](http://localhost:4000)
 
+### Submodule
+
+Pull submodule locally
+```sh
+git pull --recurse-submodules
+```
+
+Update submodule
+```sh
+git submodule update --init
+```
 
 ## Theme - Chirpy
 
