@@ -32,9 +32,7 @@ social:
   links:
     # The first element serves as the copyright owner's link
     - https://github.com/adamjoffe
-    # Uncomment below to add more social links
-    # - https://www.facebook.com/username
-    # - https://www.linkedin.com/in/username
+    - https://www.linkedin.com/in/joffe-adam
 
 # Site Verification Settings
 webmaster_verifications:
