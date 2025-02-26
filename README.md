@@ -26,7 +26,12 @@ git submodule update
 ```
 
 ## Plugins
+
 http://jekyllrb.com/docs/plugins/installation/
+
+## Icons
+
+https://fontawesome.com/icons
 
 ## Theme - Chirpy
 
