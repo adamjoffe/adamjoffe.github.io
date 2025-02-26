@@ -15,14 +15,14 @@ bundle exec jekyll serve
 
 ### Submodule
 
-Pull submodule locally
+Init submodule
 ```sh
-git pull --recurse-submodules
+git submodule init
 ```
 
 Update submodule
 ```sh
-git submodule update --init
+git submodule update
 ```
 
 ## Theme - Chirpy
