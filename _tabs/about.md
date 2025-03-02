@@ -2,6 +2,7 @@
 # the default layout is 'page'
 icon: fas fa-info-circle
 order: 5
+mermaid: true
 ---
 
 ### Who:
@@ -17,7 +18,8 @@ Experienced engineer working on projects since 2014.
 Now focussed as a Full Stack Engineer, designing and architecting solutions from the front-end down to the infrastructure.
 
 
-{% mermaid %}
+```mermaid
+%%{init: {'theme':'dark'}}%%
 flowchart BT;
     Sunswift[Sunswift]
     SunswiftR1([Structural Team Lead / Software Engineer])
@@ -44,4 +46,4 @@ flowchart BT;
     TradeLedgerR2-->TradeLedgerR3
     TradeLedgerR3-->OakNorth
     OakNorth-->OakNorthR1
-{% endmermaid %}
+```

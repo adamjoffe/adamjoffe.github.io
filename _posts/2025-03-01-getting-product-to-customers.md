@@ -1,14 +1,11 @@
 ---
 title: Getting the Product to Customers
 author: Adam Joffe
-date: 2019-08-11 00:34:00 +0800
+date: 2030-03-01 12:30:00 +0000
 categories:
   - Product Engineering
 tags:
   - product
   - CI
   - CD
-  - 
 ---
-
-
