@@ -142,13 +142,6 @@ paginate: 10
 # The base URL of your site
 baseurl: ""
 
-# Plugins
-# plugins:
-#  - jekyll-mermaid
-
-# mermaid:
-#   src: '/assets/lib/mermaid/mermaid.min.js'
-
 # ------------ The following options are not recommended to be modified ------------------
 
 kramdown:
