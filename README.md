@@ -25,6 +25,11 @@ Update submodule
 git submodule update
 ```
 
+Reset submodule
+```sh
+git submodule foreach git reset --hard
+```
+
 ## Plugins
 
 http://jekyllrb.com/docs/plugins/installation/
