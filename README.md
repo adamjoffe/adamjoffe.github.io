@@ -30,10 +30,6 @@ Reset submodule
 git submodule foreach git reset --hard
 ```
 
-## Plugins
-
-http://jekyllrb.com/docs/plugins/installation/
-
 ## Icons
 
 https://fontawesome.com/icons
@@ -41,6 +37,9 @@ https://fontawesome.com/icons
 ## Theme - Chirpy
 
 Check out the [theme's docs](https://github.com/cotes2020/jekyll-theme-chirpy/wiki).
+
+- [Writing a Post](assets/img/favicons/mstile-150x150.png)
+- [Text and Typography](https://chirpy.cotes.page/posts/text-and-typography/)
 
 ### License
 
