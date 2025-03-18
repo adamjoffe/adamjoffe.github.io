@@ -1,6 +1,6 @@
 ---
 title: Getting the Product to Customers
-date: 2030-03-01 12:30:00 +0000
+date: 2025-03-18 12:30:00 +0000
 categories:
   - Product Engineering
 tags:
@@ -11,6 +11,8 @@ tags:
 ---
 
 ## What does the customer want?
+
+![Confused Customer](../assets/post-img/2025-03-18-images/confused-customer.png)
 
 Ultimately, customer's have a problem that they need to solve, and to solve the problem they will look to the market to find a product that does this for them. As the creators of a product, we need to ensure that our developed product fits the customer's needs, this is the [product market fit](https://www.productplan.com/glossary/product-market-fit/).
 
@@ -24,11 +26,7 @@ To gain the true benefit of the customer feedback loop the product pipeline must
 
 Now to build this pipeline, a simple recipe can be followed:
 
-1. Mono environment
-2. Auto deployment
-3. Shift left
-4. Metrics
-5. Experiment
+![Agile Product Enhancement Cycle](../assets/post-img/2025-03-18-images/agile-product-enhancement-cycle.png)
 
 ### Step 1 - Mono Environment
 
@@ -66,14 +64,26 @@ With this, we can see what features benefit customers, pinpoint potential bottle
 
 Finally, we can use all these gathered metrics to improve our product. Firstly, by leveraging the usage, we can prioritise what are the high value features to work on. Then roll out experimental changes behind our feature flags, targetting reducing drop-off and/or speeding up journeys. Using segmentation functionality of the feature flags we can [A-B test](https://www.optimizely.com/optimization-glossary/ab-testing/) our changes to determine if there was a real improvement for our customers!
 
-TODO: wrap up sentence
+![Rapid Iteration to Product-Market Fit](../assets/post-img/2025-03-18-images/rapid-iteration-product-market-fit.png)
+
+This gives us everything we need to ship a ~~successful~~ product. This doesn't guarantee that what is delivered to the customer will be considered successful. However, it does let us iterate, enhance or even change what the product is, extremely rapidly. This empowers us to find [product market fit](https://www.productplan.com/glossary/product-market-fit/), stay ahead of competitors or adapt to external influences/changing market.
 
 ## Scaling the product business
 
-TODO: discuss scaling
+Having a good recipe when you cook doesn't mean you can run a restaurant. You need to be able to scale being a lone cook to a large operation by scaling through others. For software engineering, the first thing to start with is a set of **core principals** that are agreed upon by all of product engineering, non-engineers included too. This will act as a core tenant for the teams, regardless of how they're structured (tribes, squads, etc.), to ensure that independent design decisions made by each team is aligned without the need to constantly communicate. This removes those far to often "sync" meetings to ensure everyone is on the same page, because we have already agreed on how we make decisions. When selecting these principals, it is best to keep them simple and few for clarity. For example:
+
+1. Loose coupling - strong cohesion
+2. TODO:
+
+With high level principals in place, now we can focus on the architecture. This is where the abstract principals need to become concrete implementations. There are a few design philosophies that can be followed, but I would suggest [Domain Driven Design (DDD)](https://martinfowler.com/bliki/DomainDrivenDesign.html) as the primary choice. The argument I'll make for it is that it allows us to divide our teams by domains, and more importantly ownership of data. The stickiest part of any piece of software is the data. By this I mean that if we mess up a design decision, the hardest thing to change is always the data and the data models. By giving strong ownership to a team for the data within a domain, they have the best chance of getting it right. But also if they don't get it right, they have the most skin in the game when it goes wrong. 
+
+This touches on another factor, and that is team ownership and responsibilities. Getting team structure correct is more critical for the health of the codebase than you may initially think. There is a common phenomenon that occurs where the organisation structure reflects 1:1 with the structure of the code. This means if there is conflict or lack of clarity for team ownership, the same will manifest in the code; warring implementation details, throwing of concerns over the fence, or stepping on each others toes. This all does the opposite of what we're trying to achieve above, going fast!
+
 
 ## Being Selfish
 
 Another hidden benefit, more selfish than helping customers, is this method of software development if significantly more pleasant to work on and more self gratifying. Being agile in enhancing a product reduces our own feeling of friction and pain points. This increase to the developer experience almost entirely removes process bureaucracy and eliminates those silly hoops we are sometimes forced to jump through. If nothing else, don't do this for the product, do it for yourself.
 
-TODO: images
+Finally, the other selfish benefit is that if the business we are a part of is doing well, we get more license to take control of the way of working and build cool stuff!
+
+![Cool Project Ahead!](../assets/post-img/2025-03-18-images/cool-project.png)
