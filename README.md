@@ -36,6 +36,14 @@ Reset submodule
 git submodule foreach git reset --hard
 ```
 
+## Pre-commit hooks
+
+```sh
+nvm use
+npm install
+lefthook install
+```
+
 ## Icons
 
 https://fontawesome.com/icons
