@@ -6,17 +6,18 @@ mermaid: true
 ---
 
 ### Who:
+
 Adam Joffe
 
 ### What:
-Principal Engineer, Leader, Data Expert, Product Strategist 
+
+Principal Engineer, Leader, Data Expert, Product Strategist
 
 ### Why:
 
 Experienced engineer working on projects since 2014.
 
 Now focussed as a Full Stack Engineer, designing and architecting solutions from the front-end down to the infrastructure.
-
 
 ```mermaid
 %%{init: {'theme':'dark'}}%%

@@ -6,29 +6,34 @@ order: 3
 
 A collection of helpful code snippets from DevEx to Implementation
 
-
 ## Git Aliases
 
 #### Formatted graph commit history
+
 ```
 glog = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all
 ```
 
 #### Set remote for current branch with same branch name
+
 ```
 up = "!git branch --set-upstream-to=origin/$(git branch --show-current) $(git branch --show-current)"
 ```
 
 #### Create and checkout new branch from main with given name
+
 ```
 br = "!git checkout main && git pull && git checkout -b \"$1\" #"
 ```
+
 Usage:
+
 ```sh
 git br "my-branch-name"
 ```
 
 #### Checkout and pull latest main
+
 ```
 mu = "!git checkout main && git pull"
 ```
@@ -36,6 +41,7 @@ mu = "!git checkout main && git pull"
 ## Bash Profile
 
 #### Git branch prompt
+
 ```sh
 parse_git_branch() {
         git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
@@ -49,6 +55,7 @@ fi
 ```
 
 #### Always wrapped Gradle
+
 ```sh
 gradle() {
     if [ -f "gradlew" ]; then
@@ -60,6 +67,7 @@ gradle() {
 ```
 
 #### NVM auto load
+
 ```sh
 autoload -U add-zsh-hook
 load-nvmrc() {
@@ -84,6 +92,7 @@ load-nvmrc
 ```
 
 #### Lefthook auto load
+
 ```sh
 autoload -U add-zsh-hook
 install-lefthook() {

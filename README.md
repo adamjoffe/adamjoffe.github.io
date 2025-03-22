@@ -3,10 +3,13 @@
 ## Quickstart
 
 1. Install bundle
+
 ```sh
 bundle install
 ```
+
 2. Serve page
+
 ```sh
 bundle exec jekyll serve
 ```
@@ -16,16 +19,19 @@ bundle exec jekyll serve
 ### Submodule
 
 Init submodule
+
 ```sh
 git submodule init
 ```
 
 Update submodule
+
 ```sh
 git submodule update
 ```
 
 Reset submodule
+
 ```sh
 git submodule foreach git reset --hard
 ```
@@ -38,14 +44,14 @@ https://fontawesome.com/icons
 
 Check out the [theme's docs](https://github.com/cotes2020/jekyll-theme-chirpy/wiki).
 
-- [Writing a Post](assets/img/favicons/mstile-150x150.png)
-- [Text and Typography](https://chirpy.cotes.page/posts/text-and-typography/)
+* [Writing a Post](assets/img/favicons/mstile-150x150.png)
+* [Text and Typography](https://chirpy.cotes.page/posts/text-and-typography/)
 
 ### License
 
-This work is published under [MIT][mit] License.
+This work is published under \[MIT]\[mit] License.
 
-[gem]: https://rubygems.org/gems/jekyll-theme-chirpy
-[chirpy]: https://github.com/cotes2020/jekyll-theme-chirpy/
-[CD]: https://en.wikipedia.org/wiki/Continuous_deployment
-[mit]: https://github.com/cotes2020/chirpy-starter/blob/master/LICENSE
+* [gem](https://rubygems.org/gems/jekyll-theme-chirpy)
+* [chirpy](https://github.com/cotes2020/jekyll-theme-chirpy/)
+* [CD](https://en.wikipedia.org/wiki/Continuous_deployment)
+* [mit](https://github.com/cotes2020/chirpy-starter/blob/master/LICENSE)
