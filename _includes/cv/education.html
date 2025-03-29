@@ -1,11 +1,14 @@
 {% assign educations = site.data.cv.educations %}
 
-<div class="cv-education">
-    
-    {% for education in educations %}
-    <div>{{ education.degree }}</div>
-    <div>{{ education.university }}</div>
-    <div>{{ education.time }}</div>
-    {% endfor %}
-
+<div style="margin-top: -1.5rem">
+    <h2>Education</h2>
+    <div class="cv-education">
+        {% for education in educations %}
+        <div>
+            <div><strong>{{ education.degree }}</strong></div>
+            <div><em>{{ education.university }}</em></div>
+            <div>{{ education.time }}</div>
+        </div>
+        {% endfor %}
+    </div>
 </div>

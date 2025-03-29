@@ -3,7 +3,6 @@ summary:
   tagLine: Principal Engineer, Leader, Data Expert, Product Strategist
   profile: >-
     Experienced engineer working on projects since 2014.
-
     Now focussed as a Full Stack Engineer, designing and architecting solutions from the front-end down to the infrastructure.
 
 educations:
@@ -17,6 +16,7 @@ educations:
 
 skills:
   - group: Languages
+    icon: fa-solid fa-comment
     skill:
       - name: Python
       - name: Typescript
@@ -26,6 +26,7 @@ skills:
       - name: C/C++
 
   - group: Frameworks
+    icon: fa-solid fa-building
     skill:
       - name: FastAPI
       - name: Spring
@@ -37,6 +38,7 @@ skills:
       - name: DBT
 
   - group: Testing/Observability
+    icon: fa-solid fa-vial-circle-check
     skill:
       - name: BDD
       - name: TDD
@@ -45,7 +47,8 @@ skills:
       - name: Datadog
   
   - group: Build/Deploy
-    skill:
+    icon: fa-solid fa-screwdriver-wrench
+    skill: 
       - name: Poetry
       - name: Pipenv
       - name: Gradle
@@ -58,6 +61,7 @@ skills:
       - name: Terraform
     
   - group: Data
+    icon: fa-solid fa-database
     skill:
       - name: Postgres
       - name: MongoDB
@@ -65,17 +69,21 @@ skills:
       - name: Redis
 
   - group: Cloud/Distributed
+    icon: fas fa-cloud
     skill:
       - name: AWS
       - name: GCP
       - name: Kafka
+      - name: Kubernetes
 
 experiences:
   - company: OakNorth - London, UK
     roles:
       - title: Senior Software Engineer
         date: Feb 2024 - Present
-    details: Lorem Ipsum
+    headline: Lorem Ipsum
+    achievements:
+      - abc
   - company: Trade Ledger - Sydney, Australia
     roles:
       - title: Principal Engineer
@@ -84,16 +92,22 @@ experiences:
         date: May 2021 - Aug 2022
       - title: Software Engineer
         date: Nov 2019 - May 2021
-    details: Lorem Ipsum
+    headline: Lorem Ipsum
+    achievements:
+      - abc
   - company: Nasdaq - Sydney, Australia
     roles:
       - title: Junior Engineer
         date: Feb 2017 - Nov 2019
       - title: Intern Engineer
         date: Nov 2016 - Feb 2017
-    details: Lorem Ipsum
+    headline: Lorem Ipsum
+    achievements:
+      - abc
   - company: Sunswift - Sydney, Australia
     roles:
       - title: Structural Team Lead / Software Engineer
         date: Aug 2014 - Nov 2017
-    details: Lorem Ipsum
+    headline: Lorem Ipsum
+    achievements:
+      - abc
