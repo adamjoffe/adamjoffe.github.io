@@ -1,7 +1,7 @@
 ---
 layout: cv
-title: CV
+title: About
 icon: fas fa-info-circle
-order: 7
+order: 6
 ---
 
