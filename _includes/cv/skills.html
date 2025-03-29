@@ -1,0 +1,16 @@
+{% assign skills = site.data.cv.skills %}
+
+<div class="cv-skills">
+
+    {% for skill in skills %}
+    <div>
+        <h2>{{ skill.group }}</h2>
+        <ul>
+        {% for item in skill.skill %}
+            <li>{{ item.name }}</li>
+        {% endfor %}
+        </ul>
+    </div>
+    {% endfor %}
+
+</div>

@@ -1,0 +1,18 @@
+{% assign experiences = site.data.cv.experiences %}
+
+<div class="cv-experience">
+    
+    {% for experience in experiences %}
+    <h3>{{ experience.company }}</h3>
+    <ul>
+        {% for role in experience.roles %}
+        <li>
+            <div>{{ role.title }}</div>
+            <div>{{ role.date }}</div>
+        </li>
+        {% endfor %}
+    </ul>
+    <div>{{ experience.details }}</div>
+    {% endfor %}
+
+</div>
