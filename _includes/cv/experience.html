@@ -4,26 +4,28 @@
     <h2>Experience</h2>
     {% for experience in experiences %}
     <h3>{{ experience.company }}</h3>
-    <div>
-        {% for role in experience.roles %}
-        <div class="cv-role-container">
-            <div>
-                <i class="fa-solid fa-angle-right"></i>
-                <strong>{{ role.title }}</strong>
+    <div class="cv-company-container">
+        <div>
+            {% for role in experience.roles %}
+            <div class="cv-role-container">
+                <div>
+                    <i class="fa-solid fa-angle-right"></i>
+                    <strong>{{ role.title }}</strong>
+                </div>
+                <div>
+                    <em>{{ role.date }}</em>
+                </div>
             </div>
-            <div>
-                <em>{{ role.date }}</em>
-            </div>
+            {% endfor %}
         </div>
-        {% endfor %}
+        <h5>{{ experience.headline }}</h5>
+        <ul>
+            {% for achievement in experience.achievements %}
+            <li>
+                <div>{{ achievement }}</div>
+            </li>
+            {% endfor %}
+        </ul>
     </div>  
-    <div>{{ experience.headline }}</div>
-    <ul>
-        {% for achievement in experience.achievements %}
-        <li>
-            <div>{{ achievement }}</div>
-        </li>
-        {% endfor %}
-    </ul>
     {% endfor %}
 </div>

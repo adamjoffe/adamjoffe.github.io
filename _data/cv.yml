@@ -81,9 +81,12 @@ experiences:
     roles:
       - title: Senior Software Engineer
         date: Feb 2024 - Present
-    headline: Lorem Ipsum
+    headline: Senior engineer on core team for business banking product offering working on payments processing pipeline and related features.
     achievements:
-      - abc
+      - Led new payment scheme feature to address a critical business key objective, managing internal and external stakeholders; delivered on time within 2 months with observability and product metric tracking
+      - Designed payment authentication enhancement, hashing context to ensure payment token specific to payment details
+      - Payment processing pipeline re-architecture leveraging domain driven design bounded contexts and isolated infrastructure; Deployed in incremental stages to production mono-environment with no customer incidents or downtime
+      - Mentored and developed skills of junior and mid-level engineers through 1:1 pairing and group sessions, leveraging personal expertise to enhance their technical growth and problem-solving abilities
   - company: Trade Ledger - Sydney, Australia
     roles:
       - title: Principal Engineer
@@ -92,22 +95,31 @@ experiences:
         date: May 2021 - Aug 2022
       - title: Software Engineer
         date: Nov 2019 - May 2021
-    headline: Lorem Ipsum
+    headline: Product engineer solving customer problems in a greenfield Lending as a Service (LaaS) product from early stage start-up to scale-up.
     achievements:
-      - abc
+      - Built developer API portal with specs, domain documentation, and user guides including supporting diagrams and graphics
+      - White paper risk assessment engine design for receivables finance, using multiple independent computation control blocks, designed to replace an existing solution to reduce runtime by 50% and set up/configuration time by up to 95%
+      - Designed and built schema engine with extensible type system and validators for custom extension fields for core data models to allow for strong structuring of custom customer data
+      - Redis cache implementation to cut computation time of distributed permission based authorization all microservices by up to 85%
+      - Multichannel notification implementation using platform event driven architecture to generate, in-app, SMS, email, and Slack notifications
+      - Designed and implemented graphed entity model between multiple entity types with various relationship kinds for simple data exploration
   - company: Nasdaq - Sydney, Australia
     roles:
       - title: Junior Engineer
         date: Feb 2017 - Nov 2019
       - title: Intern Engineer
         date: Nov 2016 - Feb 2017
-    headline: Lorem Ipsum
+    headline: Alert algorithm engineer designing and enhancing compliance monitoring solutions for 1800+ subscriptions across 50+ markets.
     achievements:
-      - abc
+      - High volume processing project which resulted in 6x speedup in processing from 24hrs to 4hrs using high concurrency re-architecting
+      - Process automation to reduce BAU updates of 1800 broker subscription from manual 30min/broker changes to automated 2 min/broker processing
+      - Scoped, designed and implemented multiple new unusual behaviour and market manipulation finding algorithms used to ensure brokerages compliance with legal legislation and market regulators
+      - Investigated and reviewed market pattern algorithms against extremely large data sets to resolve bugs and/or discover enhancements to be implemented
   - company: Sunswift - Sydney, Australia
     roles:
       - title: Structural Team Lead / Software Engineer
         date: Aug 2014 - Nov 2017
-    headline: Lorem Ipsum
+    headline: Mechanical and software team member for student project to design, build and race solar powered vehicle biennially, competing against global teams.
     achievements:
-      - abc
+      - Lead 7 sub-assembly teams interface and integrate with other teams, resulting in seamless final integration of the solar car
+      - Segmented strategy software scenario generator from the simulator to greatly improve how many simulations can be run during the race
