@@ -22,11 +22,13 @@ Before the pitchforks come out, we will start by just doing a simple pros and co
 
 The other benefit of books is they have a high barrier to entry for producing a book. Compared to writing a blog (this site costs literally $0 to host/maintain) or online forums (Stack Overflow, Reddit, etc.) it costs real money to publish and distribute a book. This means there is an argument to be made that more thought goes into the content of a book, so they are higher quality. By the same metric, the cost of purchasing a book can be seen as gatekeeping of knowledge in some ways. Some will be made to believe that purchasing software engineering books and curating a personal library is simply a requirement of the industry. Luckily, there are a lot of libraries, or free means of acquiring books that can be used to alleviate this friction.
 
-However, whilst a book is more likely to be higher quality, the nature of the media also means the content is static, so can't easily be updated if there are errors or even if they become outdated relative to current thinking or trends. This leads to my other key argument against books, they are a one-sided form of media, which restricts the discussion or feedback the consumer can have with the author. It is also much harder to ask questions or get clarifications for what is being presented.
+Whilst a book is more likely to be higher quality, the nature of the media also means the content is static, so can't easily be updated if there are errors or even if they become outdated relative to current thinking or trends. This leads to my other key argument against books, they are a one-sided form of media, which restricts the discussion or feedback the consumer can have with the author. It is also much harder to ask questions or get clarifications for what is being presented.
 
 This leads to my more potentially controversial opinion on books, which is they are often designed to convey or explore a "right" design. I would argue this is a false dichotomy in software design of "right" and "wrong" solutions to a problem. This can be at a cost of not considering balancing [non-functional requirements](https://en.wikipedia.org/wiki/Non-functional_requirement) with product functionality for a given use-case. As a result, this can sometimes result in an anti-pattern of [silver bullet](https://en.wikipedia.org/wiki/No_Silver_Bullet) or [golden hammer](https://www.techtarget.com/searchapparchitecture/tip/Signs-of-a-Golden-Hammer-antipattern-and-ways-to-avoid-it) emerging for readers without critical thinking for applying what is covered to their given situation. This is exacerbated by the lack of feedback or discussion channel for the medium of books.
 
 ![Balancing Software Design](../assets/img/posts/2025-04-15-images/balancing-software-design.png)
+
+The final downside to a book is also that they are often a dense and long form of media. Given that there is an expectation from employees that you are continuously learning and keep up with modern technologies (extremely hard as a front-end engineer with all those JS/TS frameworks). For most people that like a work-life balance, this means that books, whilst they do have chunks in forms of chapters, might not suite all people.
 
 ## Teaching Children
 
@@ -42,21 +44,22 @@ If I had first built a wider knowledge base, I could have used that to progress 
 
 ## How Else to Learn?
 
-Well, if only it was that simple. The hardest part is always the human factor. We are not a "one-size fits all" kind of species, so unfortunately finding the best way to learn is homework for you, the reader.
+Well, if only it was that simple. The hardest part is always the human factor. We are not a "one-size fits all" kind of species, so unfortunately finding the best way to learn is homework for you, the reader. As outlined before, it is crucial when looking what works best for you to consider how it will fit into your schedule/lifestyle, so what works best will be different depending on your stage of life too. So lets look at some other options!
 
-**Notes**
-Dogma-ybe: Books are great but...
-0\. Intro - technical knowledge sharing and ideas
+### Articles and Forums
 
-1. Books good and bad - Excellent resources, dense and unapproachable, used for gatekeeping, one sided, the false dichotomy of the "right" design
-2. Teaching Children - school layered learning structure, "books are to engineering what a PhD is to a first year uni student"
-3. How else to learn? - conversations, trying and failing, general critical thinking, thought experiments!
+Like this, they aim to be small, bit-size, chunks of consumable content that are easy to digest. These are often ideal for building the wide base of knowledge prior to specialisation of denser content like a book. These forms often come with feedback in the form of comments (maybe coming soon here?) which allows for ideas to be challenged, use-cases to be discussed, and alternative suggestions to be provided.
 
-Small bit-size chunks to work around personal time given expectations from employers
+### Conversations
 
-EVERYONE IS DIFFERENT
+You'll have these in your day-to-day anyway, and I know many might already think they talk to their colleagues too much already in all those meetings. However, challenge yourself to still talk to them outside of these situations to see what random bits of knowledge you might discern from them. Maybe one day these nuggets will be gold! After all, most software engineers are hardcore nerds, or dabbling at a minimum, so talking about tech should be pretty fun for all!
 
+### Try (and Fail)
 
----
+Reading and talking are great, but if you really want to get to know something well, go try it! Even better, if you do something and it fails, you will usually learn much more than if it magically works the first time. Want to use a new piece of tech? A new library? Even some new tools? Don't start by trying to apply it to a large, already established project, go make a quick test project and apply it on a small scale. The most important part is once something works, don't just stop there, mess around with it. There are often multiple ways to solve a problem, each with their own nuances, pros, and cons. Understand these small differences will greatly improve your ability to design and architect better solutions.
+
+### Critical or Deep Thinking
+
+This worked perfectly well when exploring concepts of [general and special relativity](https://en.wikipedia.org/wiki/Einstein%27s_thought_experiments), so why stop there? Walk through ideas and implementations in your head or on a piece of paper. Draw boxes, scribble lines, scrunch up the paper and throw it at the wall in frustration. It all helps in the end. Often some of my best ideas come when I'm day dreaming, often in the shower. I'll then rush to actively think through the idea that just struck me, drawing lines in the fog of the shower glass. Then I'll rush out to get it down on paper before it is gone.
 
 Ultimately, books are one of many methods to learning and growing as an engineer. Like languages, frameworks, and tools, it should just be another utility in your back-pocket to become a strong, well rounded software engineer, capable of solving any problem.
