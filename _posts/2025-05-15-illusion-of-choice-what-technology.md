@@ -2,19 +2,20 @@
 title: "Illusion of choice: What technology to use?"
 date: 2025-05-15 12:30:00 +0000
 categories:
+  - Product Engineering
   - Software Engineering
 tags:
-    -
+  - product
+  - architecture
 ---
 
-## 
+##
 
-
-
-__NOTES__
+**NOTES**
 
 Illusion of choice: What technology to use?
-0. Intro - What technology is the wrong question, what product and for what customer is the right question
+0\. Intro - What technology is the wrong question, what product and for what customer is the right question
+
 1. Inverted Problem - People are selfish, it's not their fault, they only know what they can see, which is always their PoV. Engineers want to pick what interests them (why, what, how)
 2. The why: customer - Product dies without customers, so we start here
 3. The what: product - How does the product solve the customer issues? How does it give value
