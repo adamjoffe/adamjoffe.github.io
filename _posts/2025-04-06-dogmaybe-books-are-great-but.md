@@ -4,8 +4,8 @@ date: 2025-04-06 12:30:00 +0000
 categories:
   - Software Engineering
 tags:
-  - learning
-  - growth
+  - Learning
+  - Growth
 ---
 
 ## Sharing Ideas and Knowledge
