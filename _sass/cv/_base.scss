@@ -1,35 +1,16 @@
 .cv-wrapper {
     display: flex;
-}
-
-.cv-header-start {
-    margin-top: 1rem;
-    padding-top: 0rem;
-}
-
-.cv-main {
-    display: flex;
     flex-direction: column;
-    padding-right: 1rem;
-}
-
-.cv-sidebar {
-    background: var(--sidebar-bg);
-    border: 1px solid var(--sidebar-border-color);
-    padding-left: 1rem;
-    padding-right: 1rem;
-}
-
-.cv-education {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
 }
 
 .cv-skills {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
+    background: var(--sidebar-bg);
+    border: 1px solid var(--sidebar-border-color);
+    border-radius: 0.75rem;
+    padding: 1rem 1rem 1rem 1rem;
 }
 
 .cv-skill-container span:not(:last-child):after {
@@ -48,4 +29,10 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+}
+
+.cv-education {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
 }
