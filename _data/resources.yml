@@ -52,7 +52,17 @@ resources:
           - pitfalls
           - leadership
 
-  # - groupName: Machine Learning & AI
+  - groupName: Machine Learning & AI
+    group:
+      - name: Building Thinking Machines
+        link: https://brandon.ai/
+        summary: >-
+          Covers introduction of AI and machine learning algorithms, including the statistical mathematics behind it.
+        tags:
+          - maths
+          - AI
+          - ML
+          - statistics
 
   - groupName: Optimisations
     group:
