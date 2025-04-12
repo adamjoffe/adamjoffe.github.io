@@ -1,0 +1,20 @@
+{% assign resources = site.data.resources.resources %}
+
+<div>
+    {% for resource in resources %}
+    <div>
+        <h3>{{ resource.groupName }}</h3>
+        <div class="resources-content">
+            {% for item in resource.group %}
+                <div class="resources-item">
+                    <i class="fa-regular fa-circle-dot resources-icon"></i>
+                    <div>
+                        <div><a href={{ item.link }} target="_blank"><strong>{{ item.name }}</strong></a></div>
+                        <div class="resources-summary"><em>{{ item.summary }}</em></div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+    {% endfor %}
+</div>

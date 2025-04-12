@@ -1,7 +1,7 @@
 ---
-# the default layout is 'page'
+layout: page
 icon: fas fa-scroll
-order: 3
+order: 4
 ---
 
 A collection of helpful code snippets from DevEx to Implementation
