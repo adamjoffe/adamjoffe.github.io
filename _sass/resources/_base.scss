@@ -1,0 +1,23 @@
+.resources-wrapper {
+    display: flex;
+}
+
+.resources-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.resources-item {
+    display: flex;
+    flex-direction: row;
+    gap: 0.35rem;
+}
+
+.resources-icon {
+    padding-top: 0.5rem;
+}
+
+.resources-summary {
+    font-size: 0.90rem
+}

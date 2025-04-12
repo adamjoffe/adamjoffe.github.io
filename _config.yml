@@ -16,10 +16,12 @@ timezone: Europe/London
 
 title: Adam's Shed
 
-tagline: Musings, code snippets and resources
+tagline: Musings, resources, and code snippets
 
 description: >-
-  Resources, code snippets and musings
+  A place for me to put pen to virtual paper for thoughts and experiences as a product and software engineer. 
+  Also a hub to store links to other resources (articles, books, etc.) that are useful to me.
+  Finally, somewhere to store some code snippets, particularly for DevEx improvements, that I always look for but need rarely.
 
 url: "https://adamjoffe.github.io"
 

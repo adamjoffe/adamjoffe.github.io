@@ -1,0 +1,89 @@
+resources:
+  # - groupName: Architecture
+
+  - groupName: Authentication and Authorisation
+    group:
+      - name: Nature of OAuth2 Scopes
+        link: https://auth0.com/blog/on-the-nature-of-oauth2-scopes/
+        summary: >-
+          Discussion on limitation of scopes for authorisation as part of the OAuth2 spec.
+          Suggests scopes are a subset of permissions for a user, and actual user privileges need to be calculated to make full access control decisions.
+        tags:
+          - scopes
+          - OAuth2
+          - access control
+          - authorisation service
+      - name: OAuth2 Scopes are NOT Permissions
+        link: https://www.aserto.com/blog/oauth2-scopes-are-not-permissions
+        summary: >-
+          Explores downsides of using scopes entirely for authorisation and proposes using authorisation component/service within subnet/sidecar of the application to make access decisions.
+        tags:
+          - scopes
+          - OAuth2
+          - access control
+          - authorisation service
+      - name: RBAC with API Gateway and Open Policy Agent(OPA)
+        link: https://medium.com/apache-apisix/rbac-with-api-gateway-and-open-policy-agent-opa-9901cfb3c66d
+        summary: >-
+          Presents implementation of Role-based Access Control (RBAC) using Open Policy Agent (OPA) as the authorisation service.
+        tags:
+          - rbac
+          - access control
+          - open policy agent
+          - API
+      - name: Fine Grained Authorisation using Okta FGA
+        link: https://auth0.com/blog/getting-unlimited-scalability-with-okta-fine-grained-authorization/
+        summary: >-
+          Overview of functionality of Okta FGA and example implementation for a sample use case.
+          Also looks at performance of Okta FGA to understand limitations of the service.
+        tags:
+          - Okta FGA
+          - authorisation service
+          - access control
+
+  - groupName: Career Growth and Progress
+    group:
+      - name: How to Actually Grow in Your Organization
+        link: https://jdwyah.substack.com/p/how-to-actually-grow-in-your-organization
+        summary: >-
+          First hand insight on how to grow within an organisation and pitfalls along the way.
+          Highlights some things to look for, and learning that can be taken away
+        tags:
+          - pitfalls
+          - leadership
+
+  # - groupName: Machine Learning & AI
+
+  - groupName: Optimisations
+    group:
+      - name: Extreme HTTP Performance Tuning
+        link: https://talawah.io/blog/extreme-http-performance-tuning-one-point-two-million/
+        summary: >-
+          Covers extreme tuning of an HTTP server, looking at software, kernel and hardware optimisations through the eyes of a flame graph to achieve 1.2M API req/s on a 4 vCPU EC2 instance.
+          Good for understanding the anatomy of an HTTP server and a common multi-threading use-case. 
+          It also highlights the need for balance between the diminishing returns of optimisations and other functional benefits.
+        tags:
+          - http
+          - web server
+          - concurrency
+      - name: How Discord Reduced Websocket Traffic by 40%
+        link: https://discord.com/blog/how-discord-reduced-websocket-traffic-by-40-percent
+        summary: >-
+          Review of optimisation for event processing with focus on message compression.
+          Compares zlib and zstandard compression libraries for data compression for the Discord use case.
+        tags:
+          - compression
+          - events
+          - message processing
+
+  - groupName: Testing and Deployment
+    group:
+      - name: How Uber Tests Payments in Production
+        link: https://news.alvaroduran.com/p/cringey-but-true-how-uber-tests-payments
+        summary: >-
+          Discusses the benefits of testing something in production. In particular, it touches on legacy software and maintenance point of view given payments has been around for a long time.
+          Denotes staging environment downsides of never reflecting reality, so illustrates how this quickly hits a limitation and doesn't provide certainty which testing should give.
+        tags:
+          - staging environments
+          - resiliency
+          - metric driven
