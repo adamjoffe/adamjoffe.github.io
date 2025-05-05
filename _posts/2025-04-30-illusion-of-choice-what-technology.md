@@ -13,7 +13,7 @@ tags:
 
 When starting a new project, building a new product or enhancing something that already exists it is important to determine how we are going to solve this problem in front of us. Often, as software engineers, we think the first question to answer is what technologies, frameworks or programming languages we would like to use. But is this really the right first question to answer?
 
-![Choice to Make](../assets/img/posts/2025-04-30-images/choices-to-make.png) 
+![Choice to Make](../assets/img/posts/2025-04-30-images/choices-to-make.png)
 
 ## Inverted Problem
 
