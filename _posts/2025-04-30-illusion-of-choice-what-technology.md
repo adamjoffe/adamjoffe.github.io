@@ -41,7 +41,7 @@ Building a product from the ground up for an emerging or niche market is challen
 
 Once we have customers, then trust will become the biggest factor for retention. This means that our product must be reliable, so choosing a new, relatively un-tested technology could be seen as an unnecessary risk we don't need to take. This means often what can win out for the **how** is boring, tried and tested technologies that we know works. This allows us to focus on the product development, rather than experimenting with new technologies. In the ideal case, if we do need to scale up the business, then we also already have the benefit of having a wide range of engineers out in the market with that skill set ready to start contributing.
 
-_See [Getting the Product to Customers](../getting-product-to-customers) for a deeper dive in product delivery_
+*See [Getting the Product to Customers](../getting-product-to-customers) for a deeper dive in product delivery*
 
 ![Problem Pipeline](../assets/img/posts/2025-04-30-images/problem-pipeline.png)
 
