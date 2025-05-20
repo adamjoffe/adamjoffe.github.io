@@ -7,6 +7,8 @@ tags:
   - architecture
   - data
   - domain
+  - transformation
+  - legacy
 ---
 
 ## Data at the Root
@@ -29,9 +31,41 @@ Finally, if you really are on the fence about adding something, just remember it
 
 ## When to Migrate
 
-Just because ever bit of data is being used, doesn't mean it is guaranteed to be right. As is the nature of the beast, there will always require changes and shifts from where we thought we needed to go, to where we now think we need to go. As such, migrating will be an inevitable part of almost ever data models life.
+Just because all your data points are being actively used, doesn't mean they're guaranteed to be right. As is the nature of the beast, there will always be changes and shifts from where we thought we needed to go, to where we now think we need to go. As such, migrating will be an inevitable part of almost every data models life. There is an art to knowing when to migrate, but it will almost always come down to a question of "is this too painful to leave as it is now?".
+
+From a business and customer perspective, data migration falls under the *tech debt* label. As such, to be able to make space in any road map to migrate will require an evaluation of effort vs. efficiency gain.
+
+![Effort vs. Efficiency](../assets/img/posts/2025-05-25-images/effort-vs-efficiency.png)
+
+Paying tech debt early is always a wasted effort, as cost to pay it down at this point will always cost more than producing new features. Remember, the features are what actually provides value, not paying tech debt, to the business/customer. As tech debt accrues or time passes, the cost to pay off the tech debt and to develop new features grows. The key difference is tech debt cost grows relatively linearly, while feature effort grows relatively exponentially. This means that at a certain point it goes from inefficient to paying off tech debt to worth paying off.
+
+With data, there is one exception to this tech debt rule of change: "Did we get a fundamental assumption incorrect in our data model?". If this is the case, we can't continue with our previous approach as we know the entire effort to develop features under the old assumption has increase. So we must begin to migrate immediately.
+
+![Changed Assumptions Cost](../assets/img/posts/2025-05-25-images/changed-assumptions-cost.png)
 
 ## Hindsight 20:20
+
+The unfortunate [catch-22](https://en.wikipedia.org/wiki/Catch-22) is that if we had complete knowledge, we could correctly design our data model, however, to get complete knowledge we have to build our data model. So there isn't anything we can do, therefore we need to know how we can execute these transformations successfully. So let's discuss a couple of common methods and their pros and cons.
+
+### Migration In Situ
+
+The most straight forward approach is to migrate the data in situ. This has the benefit of having the minimum amount of effort to from from A to B, as everything is done where it lives. Usually, this would be done with a simple DB migration script, e.g. [Alembic](https://alembic.sqlalchemy.org/en/latest/) for Python SQL paradigms.
+
+The primary downside for this method is the blast radius for if something goes wrong is by far the highest, as you only have 1 instance of your data with this approach. As such, careful consideration will need to be given to backwards compatibility with existing functionality and any edge-cases which may occur as the result of this migration. As the distance between the A to B transformation increases, the complexity of the migration will increase, and so to will the risk. Eventually, this approach becomes unsuitable and we must look for something else.
+
+### Net New Build
+
+Often we feel that things get complex and wish "if only I could re-build it all", so why not? With this approach, we can build a new data model in a new place with the knowledge we now have. To lift and transform the data from the original store to the new store an ETL approach is most commonly used.
+
+The benefit here is that our existing data is left alone, so there is no risk to the store. However, there is still a risk involved as we have to ensure once we move our consumers of the data to the new store, all our existing functionality is retained. As such, there can be a considerable effort to ensure the existing functionality will work on the new data once we switch over. Our ETL strategy will also need to be considered carefully, are we planning to do ETL once or regularly sync from the old to new store. A regular sync involves more effort, but could help reduce our risk once we do switch over.
+
+### Synced Shadow Mode
+
+Here we build the new data model and implement a bi-directional data sync between old<>new. Then we can build new or adapt existing functionality on top of our new store, behind a feature flag away from customers. This "shadow mode" allows us to fully develop the new world whilst ensure full functionality of the old world. The downside is there is significantly more effort involved in syncing from the new world to the old, as we often need to make extraneous infrastructure to sync them, as well as concessions on how the data can be ported backwards.
+
+Whilst the most involved method, the sheer fact that we can road test our new data model with no impact to the existing data makes this my preferred approach for anything other than adding/renaming data points or simple constraints. Reducing the risk of breaking anything existing whilst allowing us to build confidence in our new model is makes it the obvious choice.
+
+<!-- TODO: end comment -->
 
 *Notes:*
 Data model paradox
