@@ -1,6 +1,6 @@
 ---
 title: "The Art of Estimation"
-date: 2025-06-25 12:30:00 +0000
+date: 2025-05-25 12:30:00 +0000
 categories:
   - Software Engineering
 tags:
@@ -19,11 +19,7 @@ Why bother spending the time to estimate anything? Why not just spend the effort
 
 Estimation isn't just guessing, there is a skill to being able to take incomplete information and make decision. Let's take the simple example of estimating how long a unit of work will take to complete. The only time we can know with 100% certainty how long it will take us to complete is once the work has finished. Obviously, this is far too late to determine if we should do the work or not, since it is already done! However, if we know nothing about what is required, our estimate is likely to be widely off. This is known in project management as the *"cone of uncertainty*".
 
-<div style="background-color:rgb(255,255,255)">
-
 ![Cone of Uncertainty](../assets/img/posts/2025-06-25-images/cone-of-uncertainty.png)
-
-</div>
 
 This is where skill and experience come in. We want to be able to make the most reasonable estimate that unblocks our ability to decide, using the least information possible.
 
