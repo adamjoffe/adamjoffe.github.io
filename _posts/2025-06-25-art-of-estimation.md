@@ -13,13 +13,42 @@ math: true
 
 ## Estimation of Meaning
 
-Why bother spending the time to estimate anything? Why not just spend the effort working on the problem? As engineers, the primary purpose for making estimates is to help us reason and prioritise. It also provides quantitative data for processing, allow us to determine if a bottle neck is problematic or not.
+Why bother spending the time to estimate anything? Why not just spend the effort working on the problem? As engineers, the primary purpose for making estimates is to help us reason and prioritise. It also allows us to determine quantitative magnitudes of performance metrics to predict if performance concerns are valid or not for a solution.
+
+<!-- TODO: opening pic -->
+
+Estimation isn't just guessing, there is a skill to being able to take incomplete information and make decision. Let's take the simple example of estimating how long a unit of work will take to complete. The only time we can know with 100% certainty how long it will take us to complete is once the work has finished. Obviously, this is far too late to determine if we should do the work or not, since it is already done! However, if we know nothing about what is required, our estimate is likely to be widely off. This is known in project management as the *"cone of uncertainty*".
+
+<div style="background-color:rgb(255,255,255)">
+
+![Cone of Uncertainty](../assets/img/posts/2025-06-25-images/cone-of-uncertainty.png)
+
+</div>
+
+This is where skill and experience come in. We want to be able to make the most reasonable estimate that unblocks our ability to decide, using the least information possible.
+
+So let's dive into how estimations are done and when we should be applying them.
 
 ## Estimation of Maths
 
+You may think mathematicians would never estimate a value, and that is true, but they will determine "bounds" to problems. The most common example of these bounds are used when trying to determine a proof for a conjecture. One example that is easier to comprehend is for the [Collatz Conjecture](https://en.wikipedia.org/wiki/Collatz_conjecture). This conjecture uses a given function:
+
+$$
+f(n) = \begin{cases}
+n/2 & \text{if n is even} \\
+3n + 1 & \text{if n is odd}
+\end{cases}
+$$
+
+The conjecture states that any positive integer which is input to the equation and subsequent results re-input will always converge to a value of 1 after enough recursive inputs. When doing testing with some random numbers you choose, you may have the feeling that this is true. However, since this is maths we need proof, and it simply doesn't exist. At best, we know that from the numbers between $[1,x]$ that only $x^{0.84}$ of them do converge.
+
+For the rest of use who live in the real world, especially engineers, we don't need exactness to act. The real world often has many tiny variables which do impact us, however, since they are tiny we can effectively ignore them. A simple example of this is the [small-angle approximation](https://en.wikipedia.org/wiki/Small-angle_approximation): $\sin(\theta) \approx \theta$. This only holds true for small values of $\theta$, which for determining the motion of a pendulum is always true. As such, we can simplify all the work we need to do to know the period of the pendulum swing to entirely ignore the transient angle of the pendulum to away from the vertical.
+
+The key take-away here isn't the maths, but the idea of comparing the magnitude of variables with each other and simplifying by removing variables of a significantly smaller relative magnitude.
+
 ## Estimation of Decision
 
-When approaching any problem, it is critical you an correctly identify the right area to focus on in first and prioritise. As engineer's we often want to do everything and address all problems to make it perfect. However, we have finite time in life, so we must selectively apply our time. So let's go through a concrete example where estimation skills can correctly guide you through a system design problem. Let's say you are designing a *"top 5 currently most played"* feature for a music streaming app (think Spotify). We are given this starting metric:
+When approaching any problem, it is critical you an correctly identify the right area to focus on in first and prioritise. As engineer's we often want to do everything and address all problems to make it perfect. However, we have finite time in life, so we must selectively apply our time. So let's go through a concrete example where estimation skills can correctly guide you through a system design problem. Let's say you are designing a *"top 5 current most played"* feature for a music streaming app (think Spotify). We are given this starting metric:
 
 * 10 million active users at any time, interacting with the app
 
@@ -29,7 +58,7 @@ $$10,000,000 / 180s \approx 56,000\ req/s$$
 
 Additionally, if we need to know a song start and end event then for each song we have:
 
-$$10,000,000 / 180s \* 2 \approx 112,000\ events/s$$
+$$10,000,000 / 180s \times 2 \approx 112,000\ events/s$$
 
 Given events need to result in a data *"write"* operation and API request a *"read"* operation, the event handling should definitely be the primary concern! In this example, we used estimates to take a step back and use quantitative data points to determine a priority. The data points aren't concrete, but the difference in magnitudes of them is sufficient to give us the guidance we desired.
 
@@ -38,6 +67,10 @@ Given events need to result in a data *"write"* operation and API request a *"re
 ## Estimation of Timing
 
 <!-- TODO: performance vs. readability -->
+
+## Estimation of Change <!-- TODO: better name -->
+
+It is critical to keep in mind that no matter how good we get at estimation, it is still an estimation, it isn't infallible. Therefore, it is equally important to know: *"When is the right time to change paths?"*. A wrong decision is always an inevitability, so don't get blinded by our previous choices and always feel empowered to re-evaluate and do what makes sense.
 
 *Notes:*
 
