@@ -2,7 +2,7 @@
 title: "The Art of Estimation"
 date: 2025-05-25 12:30:00 +0000
 categories:
-  - Software Engineering
+  - Software Engineering  
 tags:
   - planning
   - performance
@@ -15,7 +15,7 @@ math: true
 
 Why bother spending the time to estimate anything? Why not just spend the effort working on the problem? As engineers, the primary purpose for making estimates is to help us reason and prioritise. It also allows us to determine quantitative magnitudes of performance metrics to predict if performance concerns are valid or not for a solution.
 
-<!-- TODO: opening pic -->
+![Estimation Dashboard](../assets/img/posts/2025-06-25-images/estimation-dashboard.png)
 
 Estimation isn't just guessing, there is a skill to being able to take incomplete information and make decision. Let's take the simple example of estimating how long a unit of work will take to complete. The only time we can know with 100% certainty how long it will take us to complete is once the work has finished. Obviously, this is far too late to determine if we should do the work or not, since it is already done! However, if we know nothing about what is required, our estimate is likely to be widely off. This is known in project management as the *"cone of uncertainty*".
 
@@ -62,9 +62,13 @@ Given events need to result in a data *"write"* operation and API request a *"re
 
 ## Estimation of Timing
 
+Another pitfall which we often fall into is to blow a problem out of proportion. In our algorithms and data structure classes, we were always taught to prioritise on performance and learn [big O](https://en.wikipedia.org/wiki/Big_O_notation) time and space complexities for various things. However, the real world isn't always about your code being blazing fast, we aren't all trying to manage millions of users, thousands of terabytes of data or working on low latency systems. Some of us build complex systems where readability and maintainability are actually more critical where our largest inefficiencies aren't un-optimised loops, but system understanding and comprehension. In these cases, estimation is your friend to help you make the right trade-off.
+
 <!-- TODO: performance vs. readability -->
 
-## Estimation of Change <!-- TODO: better name -->
+Merging two time ordered lists
+
+## Estimation of Change
 
 It is critical to keep in mind that no matter how good we get at estimation, it is still an estimation, it isn't infallible. Therefore, it is equally important to know: *"When is the right time to change paths?"*. A wrong decision is always an inevitability, so don't get blinded by our previous choices and always feel empowered to re-evaluate and do what makes sense.
 
