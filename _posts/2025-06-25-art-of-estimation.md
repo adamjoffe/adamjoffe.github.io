@@ -36,7 +36,7 @@ n/2 & \text{if n is even} \\
 \end{cases}
 $$
 
-The conjecture states that any positive integer which is input to the equation and subsequent results re-input will always converge to a value of 1 after enough recursive inputs. When doing testing with some random numbers you choose, you may have the feeling that this is true. However, since this is maths we need proof, and it simply doesn't exist. At best, we know that from the numbers between $[1,x]$ that only $x^{0.84}$ of them do converge.
+The conjecture states that any positive integer which is input to the equation and subsequent results re-input will always converge to a value of 1 after enough recursive inputs. When doing testing with some random numbers you choose, you may have the feeling that this is true. However, since this is maths we need proof, and it simply doesn't exist. At best, we know that from the numbers between $\lbrack1,x\rbrack$ that only $x^{0.84}$ of them do converge.
 
 For the rest of use who live in the real world, especially engineers, we don't need exactness to act. The real world often has many tiny variables which do impact us, however, since they are tiny we can effectively ignore them. A simple example of this is the [small-angle approximation](https://en.wikipedia.org/wiki/Small-angle_approximation): $\sin(\theta) \approx \theta$. This only holds true for small values of $\theta$, which for determining the motion of a pendulum is always true. As such, we can simplify all the work we need to do to know the period of the pendulum swing to entirely ignore the transient angle of the pendulum to away from the vertical.
 
