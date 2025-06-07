@@ -58,15 +58,15 @@ $$10,000,000 / 180s \times 2 \approx 112,000\ events/s$$
 
 Given events need to result in a data *"write"* operation and API request a *"read"* operation, the event handling should definitely be the primary concern! In this example, we used estimates to take a step back and use quantitative data points to determine a priority. The data points aren't concrete, but the difference in magnitudes of them is sufficient to give us the guidance we desired.
 
-<!-- TODO: Heuristic user behaviour -->
-
 ## Estimation of Timing
 
 Another pitfall which we often fall into is to blow a problem out of proportion. In our algorithms and data structure classes, we were always taught to prioritise on performance and learn [big O](https://en.wikipedia.org/wiki/Big_O_notation) time and space complexities for various things. However, the real world isn't always about your code being blazing fast, we aren't all trying to manage millions of users, thousands of terabytes of data or working on low latency systems. Some of us build complex systems where readability and maintainability are actually more critical where our largest inefficiencies aren't un-optimised loops, but system understanding and comprehension. In these cases, estimation is your friend to help you make the right trade-off.
 
-<!-- TODO: performance vs. readability -->
+Let's take an example of a payment system that keeps contains multiple payees and all the payments made to them. We want to provide insights for our customer's to know how many times each payee has been paid and how recently. For our data, we keep a list of all payees and a list of all all payments. So if we want to show these stats for each payee, we would need to loop over each payee and then each payment to determine them, which would have O(n\*m) time complexity. So one option to improve performance is to use de-normalised data for the stats on each payee. These de-normalised stats would need to updated on the payee each time a payment occurs, which would involve either subsequent asynchronous payee updates after a payment or synchronous updates to payee when a payment occurs. In these cases, we need to consider trade-offs of weak read consistency with asynchronous updates or weaker resiliency with dual-write concerns for synchronous updates. Both cases also would need to consider concurrency of the operations in a scaled system with move throughput.
 
-Merging two time ordered lists
+<!-- TODO: Heuristic user behaviour -->
+
+In the above case, there is a lot of complexity to have a more performant system, but we never stopped to consider "did we need performance"? Well let's go back and do some estimation of our problem. If we know some additional information about the behaviour of our users
 
 ## Estimation of Change
 
