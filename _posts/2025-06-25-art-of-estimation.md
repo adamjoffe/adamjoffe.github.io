@@ -62,20 +62,22 @@ Given events need to result in a data *"write"* operation and API request a *"re
 
 Another pitfall which we often fall into is to blow a problem out of proportion. In our algorithms and data structure classes, we were always taught to prioritise on performance and learn [big O](https://en.wikipedia.org/wiki/Big_O_notation) time and space complexities for various things. However, the real world isn't always about your code being blazing fast, we aren't all trying to manage millions of users, thousands of terabytes of data or working on low latency systems. Some of us build complex systems where readability and maintainability are actually more critical where our largest inefficiencies aren't un-optimised loops, but system understanding and comprehension. In these cases, estimation is your friend to help you make the right trade-off.
 
-Let's take an example of a payment system that keeps contains multiple payees and all the payments made to them. We want to provide insights for our customer's to know how many times each payee has been paid and how recently. For our data, we keep a list of all payees and a list of all all payments. So if we want to show these stats for each payee, we would need to loop over each payee and then each payment to determine them, which would have O(n\*m) time complexity. So one option to improve performance is to use de-normalised data for the stats on each payee. These de-normalised stats would need to updated on the payee each time a payment occurs, which would involve either subsequent asynchronous payee updates after a payment or synchronous updates to payee when a payment occurs. In these cases, we need to consider trade-offs of weak read consistency with asynchronous updates or weaker resiliency with dual-write concerns for synchronous updates. Both cases also would need to consider concurrency of the operations in a scaled system with move throughput.
+Let's take an example of a payment system that keeps contains multiple payees and all the payments made to them. We want to provide insights for our customer's to know how many times each payee has been paid and how recently. For our data, we keep a list of all payees and a list of all all payments. So if we want to show these stats for each payee, we would need to loop over each payee ($N$) and then each payment ($M$) to determine them, which would have $O(N \times M)$ time complexity.
 
-<!-- TODO: Heuristic user behaviour -->
+![Payee and Payment Data](../assets/img/posts/2025-06-25-images/payee-and-payment-data.png)
 
-In the above case, there is a lot of complexity to have a more performant system, but we never stopped to consider "did we need performance"? Well let's go back and do some estimation of our problem. If we know some additional information about the behaviour of our users
+One option to improve performance is to use de-normalised data for the stats on each payee. These de-normalised stats would need to updated on the payee each time a payment occurs, which would involve either subsequent asynchronous payee updates after a payment or synchronous updates to payee when a payment occurs. In these cases, we need to consider trade-offs of weak read consistency with asynchronous updates or weaker resiliency with dual-write concerns for synchronous updates. Both cases also would need to consider concurrency of the operations in a scaled system with move throughput.
+
+In the above case, there is a lot of complexity to have a more performant system, but we never stopped to consider "did we need performance"? Well let's go back and do some estimation of our problem. We can leverage some additional information about user behaviour to improve our estimation of the priority of our performance concerns. Let's say our system above is used primarily by [small to medium enterprises](https://single-market-economy.ec.europa.eu/smes/sme-fundamentals/sme-definition_en) (a very large market). In this case, we would expect to see a few payees with many payments. Using a equivalency logic, like pendulum physics, if $N$ is significantly less than $M$, we could say:
+
+$$O(N \times M) \approx O(M) \quad \text{ if } N << M$$
+
+The opposite could also be true if we expect a payments to be relatively small compared to payees:
+
+$$O(N \times M) \approx O(N) \quad \text{ if } M << N$$
+
+In these cases, our performance optimisation is only a minor improvement. This highlights the necessity to understand *"heuristic user behaviour"* and making quantitative estimates to determine if something that can feel like a major problem is or not.
 
 ## Estimation of Change
 
 It is critical to keep in mind that no matter how good we get at estimation, it is still an estimation, it isn't infallible. Therefore, it is equally important to know: *"When is the right time to change paths?"*. A wrong decision is always an inevitability, so don't get blinded by our previous choices and always feel empowered to re-evaluate and do what makes sense.
-
-*Notes:*
-
-0. Finger in the air maths, cone of uncertainty
-1. Rough equivalence (sin-theta = 1 for low angles)
-2. Common incorrect choice due to bad estimation, performance vs. readability
-3. Not just how to estimate but when to estimate. When weighing up a problem, recency bias or personal feelings easily cloud judgement of how important something it to work on. Stepping back and doing estimates helps create quantitative data points to help decide. > Heuristic behaviour patterns of users
-4. Estimation of timing - estimating how long processes or things will take to determine magnitude of acceptable processing time vs. solving the performance bottleneck
