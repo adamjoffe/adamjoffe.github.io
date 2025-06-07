@@ -4,10 +4,10 @@ date: 2025-05-25 12:30:00 +0000
 categories:
   - Software Engineering  
 tags:
-  - planning
-  - performance
-  - prioritisation
-  - reasoning
+  - Planning
+  - Performance
+  - Prioritisation
+  - Reasoning
 math: true
 ---
 
@@ -68,7 +68,7 @@ Let's take an example of a payment system that keeps contains multiple payees an
 
 One option to improve performance is to use de-normalised data for the stats on each payee. These de-normalised stats would need to updated on the payee each time a payment occurs, which would involve either subsequent asynchronous payee updates after a payment or synchronous updates to payee when a payment occurs. In these cases, we need to consider trade-offs of weak read consistency with asynchronous updates or weaker resiliency with dual-write concerns for synchronous updates. Both cases also would need to consider concurrency of the operations in a scaled system with move throughput.
 
-In the above case, there is a lot of complexity to have a more performant system, but we never stopped to consider "did we need performance"? Well let's go back and do some estimation of our problem. We can leverage some additional information about user behaviour to improve our estimation of the priority of our performance concerns. Let's say our system above is used primarily by [small to medium enterprises](https://single-market-economy.ec.europa.eu/smes/sme-fundamentals/sme-definition_en) (a very large market). In this case, we would expect to see a few payees with many payments. Using a equivalency logic, like pendulum physics, if $N$ is significantly less than $M$, we could say:
+In the above case, there is a lot of complexity to have a more performant system, but we never stopped to consider "did we need performance"? Well let's go back and do some estimation of our problem. We can leverage some additional information about user behaviour to improve our estimation of the priority of our performance concerns. Let's say our system above is used primarily by [small to medium enterprises](https://single-market-economy.ec.europa.eu/smes/sme-fundamentals/sme-definition_en), a very large market. In this case, we would expect to see a few payees with many payments. Using a equivalency logic, like pendulum physics, if $N$ is significantly less than $M$, we could say:
 
 $$O(N \times M) \approx O(M) \quad \text{ if } N << M$$
 
