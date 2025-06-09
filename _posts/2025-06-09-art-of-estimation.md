@@ -31,7 +31,7 @@ You may think mathematicians would never estimate a value, and that is true, but
 
 $$
 f(n) = \begin{cases}
-n/2 & \text{if n is even} \\
+\frac{n}{2} & \text{if n is even} \\
 3n + 1 & \text{if n is odd}
 \end{cases}
 $$
