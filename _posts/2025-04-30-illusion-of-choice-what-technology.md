@@ -5,8 +5,8 @@ categories:
   - Product Engineering
   - Software Engineering
 tags:
-  - product
-  - architecture
+  - Product
+  - Architecture
 ---
 
 ## Where to Begin

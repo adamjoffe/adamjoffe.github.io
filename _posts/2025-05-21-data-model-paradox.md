@@ -4,11 +4,11 @@ date: 2025-05-21 12:30:00 +0000
 categories:
   - Software Engineering
 tags:
-  - architecture
-  - data
-  - domain
-  - transformation
-  - legacy
+  - Architecture
+  - Data
+  - Domain
+  - Transformation
+  - Legacy
 ---
 
 ## Data at the Root
