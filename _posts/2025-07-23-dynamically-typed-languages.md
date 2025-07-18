@@ -21,7 +21,19 @@ When working on a [greenfield](https://en.wikipedia.org/wiki/Greenfield_project)
 
 As a system grows in both size and age, having deterministic behaviour of the program becomes critical for the understanding of the system and the resiliency. [Hyrum's Law](https://www.hyrumslaw.com/) states that given sufficient amount of consumers of a system, every observable behaviour of the system will be depended upon. However, before being depended upon, every behaviour would first occur. This means that if your system ever reaches [undefined behaviour](https://en.wikipedia.org/wiki/Undefined_behavior), then critical flaws become extremely likely to manifest. This is where typing becomes your best friend!
 
-Typing provides clear conditions and bounds for your system in terms of the structure of the data which is expected. Not only this, but the type checking should occur statically before the program is even run. This avoids additional validation at runtime as the data passes throughout the system, with the only required runtime validation at the edges of the systems. These days mature dynamic languages, like Python, do come with optional static type chekers you can use and integrate to a CI pipeline. However, since typing isn't a first class citizen in a dynamic languages design the effectiveness of these checkers can be questionable at times. \[TODO: insert instance of Python type checking failing and causing an incident] \[TODO: not just the checker can fail, but so too can users! `Any` typing].
+Typing provides clear conditions and bounds for your system in terms of the structure of the data which is expected. Not only this, but the type checking should occur statically before the program is even run. This avoids additional validation at runtime as the data passes throughout the system, with the only required runtime validation at the edges of the systems. These days mature dynamic languages, like Python, do come with optional static type checkers you can use and integrate to a CI pipeline. However, since typing isn't a first class citizen in a dynamic languages design the effectiveness of these checkers can be questionable at times. In the past, I've seen the [mypy](https://github.com/python/mypy) Python type checker fail me multiple times, causing production incidents. A simple example of where the static type checker is with using a common Python library, [SQLAlchemy](https://www.sqlalchemy.org/). We can define an ORM schema for a model with fields as such:
+
+```python
+class MyDbModel(Base):
+  __tablename__ = "mr_tables"
+
+  id: Mapped[int] = mapped_column(primary_key=True)
+  data: Mapped[str] = mapped_column(String(10), nullable=True)
+```
+
+In this example, our DB model `MyDbModel` has `data` field defined as `nullable=True` so will be optional, i.e. of type `str | None`. In our code `mypy` will consider `data` as type `str` instead due to the `Mapped[str]` typing, so we can easily get undefined behaviour when `data` is `None`. While this is arguably a developer error, there is no warning from `mypy` about this and is easily done in larger code bases.
+
+It's not just the type checker that can fail us here. Given we're in the dynamically typed world, most checkers also allow `Any` typing, meaning we can just skip any bound defining and go immediately back to square one. In software, it is always best to avoid systems of trust in place of those that guarantee things. Don't trust other contributors to do the right thing, and more importantly, don't trust yourself either!
 
 ## Aged Like Fine Milk
 
