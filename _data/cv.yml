@@ -1,6 +1,6 @@
 summary:
   name: Adam Joffe
-  tagLine: Principal Engineer, Leader, Data Expert, Product Strategist
+  tagLine: Product Strategist, Leader, Data Expert, Convincing Communicator
   profile: >-
     Experienced engineer working on projects since 2014.
     Now focussed as a Full Stack Engineer, designing and building solutions from the front-end down to the infrastructure.
@@ -35,7 +35,6 @@ skills:
       - name: React
       - name: React Native
       - name: GraphQL
-      - name: DBT
 
   - group: Testing/Observability
     icon: fa-solid fa-vial-circle-check
@@ -63,10 +62,11 @@ skills:
   - group: Data
     icon: fa-solid fa-database
     skill:
-      - name: Postgres
+      - name: PostgreSQL
       - name: MongoDB
       - name: Neo4J
       - name: Redis
+      - name: DBT
 
   - group: Cloud/Distributed
     icon: fas fa-cloud
