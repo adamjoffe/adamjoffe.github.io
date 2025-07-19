@@ -45,6 +45,10 @@ This isn't to say dynamically typed languages don't have their place. If you are
 
 ## Language Cohesion
 
+So what is a good strongly typed language to choose? Naturally, different languages and their frameworks have their own pros and cons, with many languages/frameworks also coming with a huge variety of features. This gives you a wide variety of viable options, however, just because a feature exists doesn't mean it is fit for purpose. As a result many language/framework pairs have *"ideal"* use cases which must be understood. In a perfect world, we would just choose the best language/framework for what we're doing, but the number of use cases we'll come across in our product will increase quicker than the number of engineers which must maintain the product. This means we can't possibly support every new language/framework for each use case we come across, even if it is an ideal fit. For each new language/framework that is introduced the effort and required knowledge to build/maintain it will be significantly more costly than a sub-optimal language use case application.
+
+In some cases, we can't avoid needing multiple languages if we're limited by language support in the space we're working. For example, if we are using client-side web rendering, we're often limited to the [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)/[TypeScript](https://www.typescriptlang.org/) ecosystem and its 100s of available frameworks. On the backend, by choosing JavaScript/TypeScript with [Node](https://nodejs.org/en) we can have perfect language cohesion with types shareable between frontend and backend applications. However, it can be common to have performance or ecosystem concerns with
+
 *NOTES*:
 
 0. Intro - Main reason I see for people picking a dynamically typed language (i.e. Python) for a project is to move quickly. Typing can slow you down, and you want to focus on business logic and customer value. Common bootcamp language as entrypoint into software engineering
