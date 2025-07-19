@@ -1,6 +1,6 @@
 ---
 title: "\"But I want to focus on business logic\": Dynamically Typed Languages Fallacy"
-date: 2025-07-15 12:30:00 +0000
+date: 2025-07-19 12:30:00 +0000
 categories:
   - Software Engineering  
 tags:
@@ -36,6 +36,12 @@ In this example, our DB model `MyDbModel` has `data` field defined as `nullable=
 It's not just the type checker that can fail us here. Given we're in the dynamically typed world, most checkers also allow `Any` typing, meaning we can just skip any bound defining and go immediately back to square one. In software, it is always best to avoid systems of trust in place of those that guarantee things. Don't trust other contributors to do the right thing, and more importantly, don't trust yourself either!
 
 ## Aged Like Fine Milk
+
+So what should be done instead? Whilst there is a benefit to dynamically typed languages for the initial rapid ideation and prototyping stages, eventually we need to transform to a matured stable system. This is the crux of the problem, transformation is always hard **and** need to shift to a matured system happens quicker than you may think. By the time you get to the pain of maintaining a legacy dynamically typed language you will always end up saying "I should have just used a strongly typed language". There is a comparable analogy that can be seen in manufacturing, where you can spend a larger initial cost for specialised manufacturing machines that then reduce the overall per unit cost, or use readily available machines which have no initial cost but a higher per unit cost.
+
+![Manufacturing Unit Cost](../assets/img/posts/2025-07-23-images/manufacturing-unit-cost.png)
+
+This isn't to say dynamically typed languages don't have their place. If you are creating tooling, scripts or anything you don't need to maintain at a production quality, then it is absolutely a good choice! In the vein of the analogy above, it can be used in the same was as 3D printing for rapid prototyping before committing to building the final product in a more durable material.
 
 ## Language Cohesion
 
