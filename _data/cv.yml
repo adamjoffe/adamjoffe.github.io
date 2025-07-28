@@ -77,10 +77,17 @@ skills:
       - name: Kubernetes
 
 experiences:
+  - company: Monzo - London, UK
+    roles:
+      - title: Senior Software Engineer
+        date: July 2025 - Present
+    headline: TODO
+    achievements:
+      - TODO
   - company: OakNorth - London, UK
     roles:
       - title: Senior Software Engineer
-        date: Feb 2024 - Present
+        date: Feb 2024 - July 2025
     headline: Senior engineer on core team for business banking product offering working on payments processing pipeline and related features.
     achievements:
       - Led new payment scheme feature to address a critical business key objective, managing internal and external stakeholders; delivered on time within 2 months with observability and product metric tracking
