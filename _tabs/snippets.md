@@ -58,7 +58,7 @@ fi
 
 ```sh
 autoload -Uz vcs_info
-precmd() { vsc_info }
+precmd() { vcs_info }
 
 zstyle ':vcs_info:git:*' formats '(%b)'
 
