@@ -40,6 +40,27 @@ resources:
           - Okta FGA
           - authorisation service
           - access control
+      - name: Cryptography - Hands on Tutorials
+        link: https://cryptohack.org/
+        summary: >-
+          Interactive cryptography lessons covering the encoding, hashing, and modular arithmetic used as a basis. 
+          It also specifically covers symmetric cryptography, public-key cryptography, and elliptic curves.
+        tags:
+          - cryptography
+          - symmetric keys
+          - asymmetric keys
+          - modular arithmetic
+
+  - groupName: Building Blocks
+    group:
+      - name: "Mastering System I/O: 5 Core Models Every Software Engineer Should Know"
+        link: https://alexpham.dev/2025/08/17/mastering-system-i-o-5-core-models-every-software-engineer-should-know/
+        summary: >-
+          Deep dive into 5 core I/O system models to understand the fundamental models used by systems at scale.
+        tags:
+          - I/O
+          - network
+          - files
 
   - groupName: Career Growth and Progress
     group:
@@ -85,6 +106,12 @@ resources:
           - compression
           - events
           - message processing
+      - name: Going faster than memcpy
+        link: https://squadrick.dev/journal/going-faster-than-memcpy
+        summary: >-
+          Deep dive into creating a version of memcpy library which is faster than the standard C library.
+        tags:
+          - memory
 
   - groupName: Testing and Deployment
     group:
