@@ -20,10 +20,10 @@ glog = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C
 up = "!git branch --set-upstream-to=origin/$(git branch --show-current) $(git branch --show-current)"
 ```
 
-#### Create and checkout new branch from main with given name
+#### Create and checkout new branch from default branch with given name
 
 ```
-br = "!git checkout main && git pull && git checkout -b \"$1\" #"
+br = "!git checkout $(git symbolic-ref refs/remotes/origin/HEAD --short | cut -d'/' -f2) && git pull && git checkout -b \"$1\" #"
 ```
 
 Usage:
@@ -32,10 +32,16 @@ Usage:
 git br "my-branch-name"
 ```
 
-#### Checkout and pull latest main
+#### Checkout and pull latest default branch
 
 ```
-mu = "!git checkout main && git pull"
+mu = "!git checkout $(git symbolic-ref refs/remotes/origin/HEAD --short | cut -d'/' -f2) && git pull"
+```
+
+#### Pull default branch into current branch
+
+```
+pom = "!git pull origin $(git symbolic-ref refs/remotes/origin/HEAD --short | cut -d'/' -f2)"
 ```
 
 ## Bash Profile
@@ -78,7 +84,7 @@ gradle() {
 }
 ```
 
-#### NVM auto load
+#### NVM auto load - zsh
 
 ```sh
 autoload -U add-zsh-hook
@@ -103,7 +109,7 @@ add-zsh-hook chpwd load-nvmrc
 load-nvmrc
 ```
 
-#### Lefthook auto load
+#### Lefthook auto load - zsh
 
 ```sh
 autoload -U add-zsh-hook
