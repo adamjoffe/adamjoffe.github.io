@@ -15,15 +15,13 @@ tags:
 
 ## Origins
 
-"Mr. Payments" was a nickname given to me about a year into my time working at a [B2B](https://en.wikipedia.org/wiki/Business-to-business) bank. I had joined the payments team which was responsible for the entire end-to-end payments pipeline and experience:
+"Mr. Payments" was a title given to me about a year into my time working at a [B2B](https://en.wikipedia.org/wiki/Business-to-business) bank. I had joined the payments team which was responsible for the entire end-to-end payments pipeline and experience:
 
-<!-- TODO: outline what these are -->
-
-* Clearing:
-* Ledger:
-* Transaction Monitoring:
-* User experience:
-* Security:
+* Clearing: The actual exchange of money between two financial institutes on the behalf of the customers
+* Ledger: The atomic record of inbound and outbound monetary movements for each customer account
+* Transaction Monitoring: The tracking of inbound and outbound monetary movements for customers to check for fraudulant activity or signs of money laundering
+* User experience: The web or mobile interface users interactive with that provides a rich set of features
+* Security: The systems in place to protect the customers accounts and money from bad actors, ensuring trust is maintained for the financial institute
 
 Previous to this I had worked in other FinTech spaces (e.g. market surveillance, loan origination) but never in a payments space. The only somewhat applicable skill I had was from my time working in market surveillance. During this time I was in the team responsible for writing algorithms to spot suspicious or illegal activities on exchange markets, which only tangentially relates to transaction monitoring. From this almost zero knowledge start, within the space of the year, I was able to become a subject matter expert in this area and able to lead projects, manage key stakeholders, and drive product direction.
 
@@ -57,24 +55,4 @@ In the best case, this will result in an iteratively better solution than your f
 
 Once your knowledge is built up and you have a reputation as a domain expert, you will reach a limit. As a single person you can't scale infinitely. The primary lever is to scale through others. Whilst being the holder of a significant amount of knowledge is beneficial, it always results in being a burden for you and a bottleneck for others. To avoid this, you should try to provide information to others in a self-serve manner. For this, you should always attempt to see what information that you have that others may be missing or will likely seek in the future, and then **document**! This approach to always consider what knowledge others may not have shouldn't just stop at documentation. This should always be at the forefront of your mind when communicating with anyone. From their perspective, it is very hard to understand the depth of an unknown problem space, so the pertinent questions they can ask will be limited. As such, when knowledge sharing a topic you are well versed on, don't dive straight into the fine details that interest you or are the most complicated. Instead, start with broader context and lead your audience into the depths of the domain. This way, you can ensure you avoid them making misleading assumptions or being confused due to perceptions they may have.
 
-Teaching others,
-
-The other reflective approach is to put yourself in the customer's shoes.
-
-* always consider "what knowledge do I have that others don't" when explaining things. This avoids confusing or misleading assumptions.
-
-* teach/help others -> reflective learning
-
-* put yourself in the customers shoes
-
-*NOTES*
-
-How I became "Mr. Payments"
-
-* Quote from anonymous engineer
-* always ask questions
-* don't stop with a working solution
-* put yourself in the customers shoes
-* always consider "what knowledge do I have that others don't" when explaining things. This avoids confusing or misleading assumptions.
-* go from first principals, build up understand like LEGOs
-* teach/help others -> reflective learning
+Helping others by walking through code/concepts with them doesn't just help them, it also helps you! By being forced to explain a concept in a way for others the way in which you understand it may not work for them. As such, you will be forced to have a more complete view on the knowledge you hold. This ends up helping you as well to see things from a new perspective through [reflective learning](https://en.wikipedia.org/wiki/Reflective_learning). Your colleagues aren't the only ones with which the approach of seeing things from their point of view is a benefit. The same should be done with the scariest of taskmasters - customers, however, this one is different to your colleague. Your colleagues work in the field (software engineering) and sector (i.e. FinTech, Health Tech, Game Dev, etc.) with you, so will have an rough understanding or foundational knowledge to pull from. Customers on the other hand come from a huge range of backgrounds, to the point where there could be no real shared understanding between you and them. As such, you'll need to stretch a bit further to put yourself in their shoes. Doing this won't improve your technical knowledge like explaining concepts to your colleague, instead it will improve your product knowledge as you work to understand the need of the customer. One isn't better than the other, as both are citical to become a fully rounded domain subject matter expert with your own catchy title!
