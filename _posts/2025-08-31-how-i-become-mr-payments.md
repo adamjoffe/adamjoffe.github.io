@@ -1,6 +1,6 @@
 ---
 title: How I Became "Mr. Payments"
-date: 2025-07-31 12:30:00 +0000
+date: 2025-08-31 12:30:00 +0000
 categories:
   - Software Engineering
   - Product Engineering
@@ -54,6 +54,12 @@ Finally, the last trick that I can suggest is once you have a *"complete working
 In the best case, this will result in an iteratively better solution than your first approach. Even if it doesn't, it will always give you some valuable knowledge. With the approach, take particular care to explore how things function under the hood. For instance, if there is a framework feature, or test mock that is being leveraged, go explore how it works and play around with altering how the interface is being used. Whilst you are unlikely to work on the innards of the thing, there is a lot value in understanding it, which reading documentation which treats it as a black box, won't be able to teach you. A black box is useful for abstraction and compartmentalising, but it will ultimately restrict you from your full potential.
 
 ## Retro
+
+Once your knowledge is built up and you have a reputation as a domain expert, you will reach a limit. As a single person you can't scale infinitely. The primary lever is to scale through others. Whilst being the holder of a significant amount of knowledge is beneficial, it always results in being a burden for you and a bottleneck for others. To avoid this, you should try to provide information to others in a self-serve manner. For this, you should always attempt to see what information that you have that others may be missing or will likely seek in the future, and then **document**! This approach to always consider what knowledge others may not have shouldn't just stop at documentation. This should always be at the forefront of your mind when communicating with anyone. From their perspective, it is very hard to understand the depth of an unknown problem space, so the pertinent questions they can ask will be limited. As such, when knowledge sharing a topic you are well versed on, don't dive straight into the fine details that interest you or are the most complicated. Instead, start with broader context and lead your audience into the depths of the domain. This way, you can ensure you avoid them making misleading assumptions or being confused due to perceptions they may have.
+
+Teaching others,
+
+The other reflective approach is to put yourself in the customer's shoes.
 
 * always consider "what knowledge do I have that others don't" when explaining things. This avoids confusing or misleading assumptions.
 
