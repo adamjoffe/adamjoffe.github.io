@@ -1,6 +1,6 @@
 ---
 title: A Few of My Favourite Concepts
-date: 2025-09-31 12:30:00 +0000
+date: 2025-10-31 12:30:00 +0000
 categories:
   - Software Engineering
   - Product Engineering
@@ -9,7 +9,7 @@ tags:
   - Terminology
 ---
 
-## A Few of My Favourite ~~things~~ Concepts
+# A Few of My Favourite ~~things~~ Concepts
 
 *Notes*
 
