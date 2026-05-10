@@ -74,6 +74,11 @@ resources:
         link: https://itnext.io/5-common-async-coalescing-patterns-db7b1cac1507
         summary: >-
           Overview of 5 async patterns used for coalescing requests into a desired output based on the use-case and requirements needed from the system.
+      - name: Message and Task Queues
+        link: https://medium.com/@yashvaishnav1404/message-queue-and-task-queue-when-to-use-them-fe3a694f6433
+        summary: >-
+          Explores the differences between related distributed queue technologies and when each is applicable. 
+          Covers task queues, message queues and message brokers, highlighting the difference in features that make them appropriate for different applications.
 
   - groupName: Career Growth and Progress
     group:
