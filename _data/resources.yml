@@ -61,6 +61,24 @@ resources:
           - I/O
           - network
           - files
+      - name: How To Do Distributed Locking
+        link: https://martin.kleppmann.com/2016/02/08/how-to-do-distributed-locking.html
+        summary: >-
+          Looking at an algorithm for distributed locking called "Redlock" and discussion why it isn't fit for purpose for a number of cases.
+          Provides detailed examples of why it doesn't work and suggestions on other technologies that can be used instead.
+        tags:
+          - locking
+          - distributed
+          - correctness
+      - name: 5 Common Async Coalescing Patterns
+        link: https://itnext.io/5-common-async-coalescing-patterns-db7b1cac1507
+        summary: >-
+          Overview of 5 async patterns used for coalescing requests into a desired output based on the use-case and requirements needed from the system.
+      - name: Message and Task Queues
+        link: https://medium.com/@yashvaishnav1404/message-queue-and-task-queue-when-to-use-them-fe3a694f6433
+        summary: >-
+          Explores the differences between related distributed queue technologies and when each is applicable. 
+          Covers task queues, message queues and message brokers, highlighting the difference in features that make them appropriate for different applications.
 
   - groupName: Career Growth and Progress
     group:
@@ -72,6 +90,15 @@ resources:
         tags:
           - pitfalls
           - leadership
+      - name: How to scale your impact across multiple teams as an individual contributor
+        link: https://medium.com/@jacobmoxham/how-to-scale-your-impact-across-multiple-teams-as-an-individual-contributor-c76c33bb7be1
+        summary: >-
+          Discussion on how switching from senior engineer to staff engineer changes the contribution dynamic as your remit of ownership expands.
+          Looks at how to optimise for your impact whilst keeping your context switching required to a manageable threshold.
+        tags:
+          - impact
+          - scope
+          - influence
 
   - groupName: Machine Learning & AI
     group:
@@ -112,6 +139,15 @@ resources:
           Deep dive into creating a version of memcpy library which is faster than the standard C library.
         tags:
           - memory
+      - name: Performance Hints
+        link: https://abseil.io/fast/hints.html
+        summary: >-
+          A set of quantitatively backed hints on how to think about performance and where meaningful gains can be made.
+        tags:
+          - memory
+          - network
+          - cache
+          - concurrency
 
   - groupName: Testing and Deployment
     group:
